@@ -6,7 +6,7 @@ INC_DIR = 	./berkeley-testfloat-3/source/ \
 
 all: generator
 
-generator: src/main.c berkeley-softfloat-3/build/$(HOST_TARGET)/softfloat.a berkeley-testfloat-3/build/$(HOST_TARGET)/testfloat.a
+generator: src/main.cpp berkeley-softfloat-3/build/$(HOST_TARGET)/softfloat.a berkeley-testfloat-3/build/$(HOST_TARGET)/testfloat.a
 	$(CXX) $^ $(addprefix -I,${INC_DIR}) -g -o $@
 
 init:
