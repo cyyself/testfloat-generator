@@ -18,7 +18,7 @@ clean:
 	rm generator
 
 berkeley-softfloat-3/build/$(HOST_TARGET)/softfloat.a:
-	$(MAKE) -C berkeley-softfloat-3/build/$(HOST_TARGET) TESTFLOAT_OPTS="$(TESTFLOAT_OPTS)" softfloat.a -j `nproc`
+	$(MAKE) -C berkeley-softfloat-3/build/$(HOST_TARGET) SPECIALIZE_TYPE=RISCV TESTFLOAT_OPTS="$(TESTFLOAT_OPTS)" softfloat.a -j `nproc`
 
 berkeley-testfloat-3/build/$(HOST_TARGET)/testfloat.a:
-	$(MAKE) -C berkeley-testfloat-3/build/$(HOST_TARGET) TESTFLOAT_OPTS="$(TESTFLOAT_OPTS)" testfloat.a -j `nproc`
+	$(MAKE) -C berkeley-testfloat-3/build/$(HOST_TARGET) SPECIALIZE_TYPE=RISCV TESTFLOAT_OPTS="$(TESTFLOAT_OPTS)" testfloat.a -j `nproc`
